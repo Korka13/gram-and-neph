@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Ricettine e Ricettone"
-theme = "blank"
+theme = "the-theme"
 
 
 [taxonomies]

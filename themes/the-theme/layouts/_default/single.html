@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
+			<div class="thumbnail homepage">
+				<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
+			</div>
+			<div>
+				<ul id="ingredienti">
+					{{ range .Params.ingredienti }}
+					<li>{{ . }}</li>
+					{{ end }}
+				</ul>
+			</div>
+			{{ range .Params.livello }}
+			<p>{{ . }}</p>
+			{{ end }}
+			{{ range .Params.dieta }}
+			<p>{{ . }}</p>
+			{{ end }}
+			{{ range .Params.tempo }}
+			<p>{{ . }}</p>
+			{{ end }}
+			<div>
+				{{ .Content }}
+			</div>
+
+
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</article>
+	</main>
+
+{{ partial "footer.html" . }}

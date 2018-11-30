@@ -1,5 +1,5 @@
 ---
-title: "Spaghetti Alla Carbonara lorem e altro sugo pronto"
+title: "Spaghetti Alla Carbonara"
 date: 2018-11-08T14:25:31+02:00
 draft: false
 image: /img/spaghetti.jpg

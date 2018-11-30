@@ -9,11 +9,13 @@
 	<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
 </div>
 </a>
+<p>
 				{{ range .Params.livello }}
-				<p>{{ . }}</p>
+				<span class="glyphicon glyphicon-education" aria-hidden="true"></span><span>{{ . }}</span>
 				{{ end }}
 				{{ range .Params.dieta }}
-				<p>{{ . }}</p>
+				<span>{{ . }}</span>
+			</p>
 				{{ end }}
 				{{ range .Params.tempo }}
 				<p>{{ . }}</p>
