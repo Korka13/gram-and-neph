@@ -1,0 +1,23 @@
+
+
+
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<article>
+				<h2 class="titoli-home"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<a href="{{ .Permalink }}">
+<div class="thumbnail homepage">
+	<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
+</div>
+</a>
+				{{ range .Params.livello }}
+				<p>{{ . }}</p>
+				{{ end }}
+				{{ range .Params.dieta }}
+				<p>{{ . }}</p>
+				{{ end }}
+				{{ range .Params.tempo }}
+				<p>{{ . }}</p>
+				{{ end }}
+
+	</article>
+</div>

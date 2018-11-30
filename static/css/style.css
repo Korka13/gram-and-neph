@@ -1,0 +1,47 @@
+body {
+  font-family: 'Prompt', sans-serif;
+  }
+
+  #brand {
+  text-align: center;
+  font-size: 6rem;
+}
+
+a {
+  color: black;
+
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+ul.nav, ul.nav-tabs {
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: inherit;
+  border: none;
+  /* text-decoration: underline; */
+}
+
+
+
+img.presentazione {
+  height: 250px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.titoli-home {
+  text-align: center;
+  /* white-space: nowrap; */
+  height: 60px;
+  /* line-height: 60px; */
+}

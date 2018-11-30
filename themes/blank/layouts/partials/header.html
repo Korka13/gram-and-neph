@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	<link href="https://fonts.googleapis.com/css?family=Prompt:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+</head>
+
+<body>
+	<header>
+		<div class="container">
+		<h1 id="brand"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+		<nav>
+			<ul class="nav nav-tabs">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li>
+          <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
+        </li>
+        {{ end }}
+		</nav>
+
+			</div>
+	</header>

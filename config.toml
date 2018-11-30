@@ -1,0 +1,26 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Ricettine e Ricettone"
+theme = "blank"
+
+
+[taxonomies]
+  category = "categories"
+  dieta = "dieta"
+  livello = "livello"
+  tempo = "tempo"
+
+
+
+
+
+
+[[menu.main]]
+name = "CHI SONO"
+url = "about/"
+weight = 1
+
+[[menu.main]]
+name = "CONTATTI"
+url = "contact/"
+weight = 2
