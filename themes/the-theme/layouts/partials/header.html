@@ -15,37 +15,26 @@
 
 <body>
 	<header>
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		    </div>{}
+  <div class="collapse navbar-collapse flex-column align-items-stretch" id="navbarSupportedContent">
+    <ul class="navbar-nav justify-content-around">
+			{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ "/categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
+			</li>
+			{{ end }}
+        </div>
+    </ul>
+  </div>
+</nav>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-						<li>
-							<a href="/">Home</a>
-						</li>
-						{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-						<li>
-							<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
-						</li>
-						{{ end }}
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
-		<div id="brand">
-			<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-		</div>
+
+
 		<div class="list-group" id="legenda">
 		  <a href="#" class="list-group-item">
 		    Cras justo odio
