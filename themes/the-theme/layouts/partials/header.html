@@ -15,17 +15,45 @@
 
 <body>
 	<header>
-		<div class="container">
-			<div id="brand">
-				<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-			</div>
-		<nav>
-			<ul class="nav nav-tabs">
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
-        </li>
-        {{ end }}
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+						<li>
+							<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
+						</li>
+						{{ end }}
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
 		</nav>
-			</div>
+		<div id="brand">
+			<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		</div>
+		<div class="list-group" id="legenda">
+		  <a href="#" class="list-group-item">
+		    Cras justo odio
+		  </a>
+		  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+		  <a href="#" class="list-group-item">Morbi leo risus</a>
+		  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+		  <a href="#" class="list-group-item">Vestibulum at eros</a>
+		</div>
+
 	</header>

@@ -3,7 +3,7 @@
 
 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 			<article>
-				<h2 class="titoli-home"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
 <a href="{{ .Permalink }}">
 <div class="thumbnail homepage">
 	<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
@@ -11,7 +11,7 @@
 </a>
 <p>
 				{{ range .Params.livello }}
-				<span class="glyphicon glyphicon-education" aria-hidden="true"></span><span>{{ . }}</span>
+				<span>{{ . }}</span>
 				{{ end }}
 				{{ range .Params.dieta }}
 				<span>{{ . }}</span>
@@ -20,6 +20,6 @@
 				{{ range .Params.tempo }}
 				<p>{{ . }}</p>
 				{{ end }}
-
+<h2 class="titoli-home"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 	</article>
 </div>

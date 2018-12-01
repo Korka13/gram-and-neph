@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Ricettine e Ricettone"
+title = "Ricets"
 theme = "the-theme"
 
 
