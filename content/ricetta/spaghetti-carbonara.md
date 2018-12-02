@@ -4,7 +4,7 @@ date: 2018-11-08T14:25:31+02:00
 draft: false
 image: /img/spaghetti.jpg
 categories:
-  - pasta
+  - primi
 livello:
   - facile
 dieta:

@@ -4,7 +4,7 @@ date: 2018-11-07T07:15:08.015Z
 draft: false
 image: /img/amatriciana.jpg
 categories:
-  - pasta
+  - primi
 livello:
   - difficile
 dieta:

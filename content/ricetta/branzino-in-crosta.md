@@ -4,7 +4,7 @@ date: 2018-11-09T14:25:44+02:00
 draft: false
 image: /img/branzinosale.jpg
 categories:
-  - pesce
+  - secondi
 livello:
   - medio
 dieta:

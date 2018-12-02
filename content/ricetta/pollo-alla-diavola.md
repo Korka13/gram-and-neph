@@ -4,7 +4,7 @@ date: 2018-11-08T14:25:31+02:00
 draft: false
 image: /img/pollo-alla-diavola.jpg
 categories:
-  - carne
+  - secondi
 livello:
   - medio
 dieta:

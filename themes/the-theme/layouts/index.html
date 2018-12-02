@@ -1,14 +1,17 @@
 {{ partial "header.html" . }}
-	<main>
-		<div class="container">
-			<div class="row">
+
+<div class="container w-100">
+			<div class="row justify-content-around">
 				{{ $paginator := .Paginate (where (where .Site.Pages "Type" "ricetta") "IsPage" true) 6 }}
 				{{ range $index, $element := .Paginator.Pages }}
 		{{ partial "summary.html" . }}
 		{{ end }}
 	</div>
 </div>
-{{ template "_internal/pagination.html" . }}
-	</main>
+
+<div class="container d-flex justify-content-center">
+	{{ template "_internal/pagination.html" . }}
+</div>
+
 
 {{ partial "footer.html" . }}

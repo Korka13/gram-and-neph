@@ -1,10 +1,10 @@
 ---
-title: "Zucchine Tristi"
+title: "Patate Al Forno"
 date: 2018-11-08T14:25:31+02:00
 draft: false
-image: /img/zucchine.jpg
+image: /img/patate.jpg
 categories:
-  - antipasti
+  - Estere
 livello:
   - facile
 dieta:

@@ -1,12 +1,10 @@
 {{ partial "header.html" . }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<div class="thumbnail homepage">
-				<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
+			<h1 class="text-center">{{ .Title }}</h1>
+			<div class="">
+				<img class="img-fluid mx-auto" src="{{ .Params.image }}" alt="{{ .Title }}">
 			</div>
 			<div>
-				<ul id="ingredienti">
+				<ul>
 					{{ range .Params.ingredienti }}
 					<li>{{ . }}</li>
 					{{ end }}
@@ -29,7 +27,5 @@
 			<div>
 				{{ template "_internal/disqus.html" . }}
 			</div>
-		</article>
-	</main>
 
 {{ partial "footer.html" . }}

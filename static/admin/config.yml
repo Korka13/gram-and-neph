@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   # repo: Korka13/Korka13.github.io
   branch: master
-  site_domain: elastic-lamport-adc270.netlify.com
+  site_domain: 
 
 
 # These lines should *not* be indented
@@ -24,19 +24,24 @@ collections:
       - label: "Category"
         name: "categories"
         widget: "select"
-        options: ["carne", "pesce", "pasta", "dolci", "verdura"]
+        options: ["primi", "secondi", "antipasti", "dolci", "estere"]
       - label: "Livello"
         name: "livello"
         widget: "select"
         options: ["facile", "medio", "difficile", "super nonna"]
       - label: "Dieta"
         name: "dieta"
-        widget: "select"
+        widget: "list"
+        allow_add: false
         options: ["vegetariana", "vegana", "gluten free", "iper calorica", "senza lattosio"]
+      - label: "Porzioni"
+        name: "porzioni"
+        widget: "number"
+        valueType: "int"
+        default: 4
       - label: "Tempo"
         name: "tempo"
-        widget: "select"
-        options: ["veloce (15 - 30 min)", "ragionevole (1 ora circa)", "lungo (2 - 3 ore)", "lunghissimo (4 o più ore)"]
+        widget: "string"
       - {label: "Ingredienti", name: "ingredienti", widget: "list"}
       - {label: "Keywords", name: "keywords", widget: "list"}
       - {label: "Description", name: "description", widget: "string"}

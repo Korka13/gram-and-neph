@@ -1,25 +1,24 @@
 
 
 
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-			<article>
+<div class="col-sm-6 col-lg-4 my-5 card-group">
+<div class="card border-0 mx-2">
+	<a href="{{ .Permalink }}"><img class="card-img-top rounded border" src="{{ .Params.image }}" alt="{{ .Title }}"></a>
+	<div class="card-body">
+		<p class="card-text d-flex justify-content-around">
+			{{ range .Params.livello }}
+			<span>{{ . }}</span>
+			{{ end }}
+			{{ range .Params.dieta }}
+			<span>{{ . }}</span>
+			{{ end }}
+			{{ range .Params.tempo }}
+			<span>{{ . }}</span>
+			{{ end }}
+		</p>
+		<h5 class="card-title text-center"><a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a></h5>
 
-<a href="{{ .Permalink }}">
-<div class="thumbnail homepage">
-	<img class="presentazione" width="400px" height="300px" src="{{ .Params.image }}" alt="{{ .Title }}">
+	</div>
+
 </div>
-</a>
-<p>
-				{{ range .Params.livello }}
-				<span>{{ . }}</span>
-				{{ end }}
-				{{ range .Params.dieta }}
-				<span>{{ . }}</span>
-			</p>
-				{{ end }}
-				{{ range .Params.tempo }}
-				<p>{{ . }}</p>
-				{{ end }}
-<h2 class="titoli-home"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-	</article>
 </div>
