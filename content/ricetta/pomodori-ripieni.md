@@ -10,7 +10,8 @@ dieta:
   - senza glutine
   - vegana
 porzioni: 4
-tempo: 3 ore
+tempo:
+  - 3 ore
 ingredienti:
   - uova
   - zucchero
