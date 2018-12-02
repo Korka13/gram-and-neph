@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   # repo: Korka13/Korka13.github.io
   branch: master
-  site_domain: 
+  site_domain: youthful-kare-33d160.netlify.com
 
 
 # These lines should *not* be indented
