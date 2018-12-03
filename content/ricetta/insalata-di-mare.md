@@ -4,8 +4,10 @@ date: 2018-12-03T00:22:21.086Z
 draft: false
 image: /images/uploads/download.jpg
 categories: antipasti
-livello: super nonna
-dieta: gluten free
+livello: 
+  - super nonna
+dieta: 
+  - gluten free
 porzioni: 8
 tempo:
   - 30 minuti
