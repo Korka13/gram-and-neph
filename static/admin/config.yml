@@ -58,6 +58,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
+    delete: false
     files:
       - file: "content/about.md"
         label: "Chi Siamo"
