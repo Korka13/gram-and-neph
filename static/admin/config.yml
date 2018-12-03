@@ -35,9 +35,14 @@ collections:
             - { label: "super nonna", value: [super nonna] }
       - label: "Dieta"
         name: "dieta"
-        widget: "list"
-        allow_add: false
-        options: ["vegetariana", "vegana", "gluten free", "iper calorica", "senza lattosio"]
+        widget: "select"
+        options:
+            - { label: "vegetariana", value: [vegetariana] }
+            - { label: "vegana", value: [vegana] }
+            - { label: "gluten free", value: [gluten free] }
+            - { label: "senza lattosio", value: [senza lattosio] }
+            - { label: "iper caloricaa", value: [iper calorica] }
+        multiple: true
       - label: "Porzioni"
         name: "porzioni"
         widget: "number"
