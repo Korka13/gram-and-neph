@@ -4,7 +4,7 @@ date: 2018-12-03T03:26:28.416Z
 draft: false
 image: /images/uploads/panzerotti.jpg
 categories: antipasti
-livello: '[super nonna]'
+livello: [super nonna]
 dieta:
   - vegana
 porzioni: 4
