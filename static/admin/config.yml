@@ -28,11 +28,15 @@ collections:
       - label: "Livello"
         name: "livello"
         widget: "select"
-        options: ["facile", "medio", "difficile", "super nonna"]
+        options:
+          - {label: "Facile", value: "'facile'"}
+          - {label: "Medio", value: "'medio'"}
+          - {label: "Difficile", value: "'difficile'"}
+          - {label: "Super Nonna", value: "'super nonna'"}
       - label: "Dieta"
         name: "dieta"
-        widget: "select"
-        multiple: true
+        widget: "list"
+        allow_add: false
         options: ["vegetariana", "vegana", "gluten free", "iper calorica", "senza lattosio"]
       - label: "Porzioni"
         name: "porzioni"
