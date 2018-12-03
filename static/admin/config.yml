@@ -4,6 +4,10 @@ backend:
   branch: master
   site_domain: youthful-kare-33d160.netlify.com
 
+display_url: https://youthful-kare-33d160.netlify.com
+
+publish_mode: editorial_workflow
+
 
 # These lines should *not* be indented
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
