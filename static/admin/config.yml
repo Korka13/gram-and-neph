@@ -31,8 +31,8 @@ collections:
         options: ["facile", "medio", "difficile", "super nonna"]
       - label: "Dieta"
         name: "dieta"
-        widget: "select"
-        multiple: true
+        widget: "list"
+        allow_add: false
         options: ["vegetariana", "vegana", "gluten free", "iper calorica", "senza lattosio"]
       - label: "Porzioni"
         name: "porzioni"
