@@ -29,7 +29,7 @@ collections:
         name: "livello"
         widget: "list"
         fields: [
-            {label: "Seleziona", widget: "select", options: ["facile", "medio", "difficile", "super nonna"]},
+            {label: "Seleziona", name: "", widget: "select", options: ["facile", "medio", "difficile", "super nonna"]},
             ]
       - label: "Dieta"
         name: "dieta"
