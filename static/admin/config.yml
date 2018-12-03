@@ -38,6 +38,13 @@ collections:
         widget: "select"
         multiple: true
         options: ["Design", "UX", "Dev"]
+      - {
+          label: 'Dieta',
+          name: 'dieta',
+          widget: 'select',
+          options: ['vegetariana', 'vegana', 'senza glutine'],
+          multiple: true,
+        }
       - label: "Dieta"
         name: "dieta"
         widget: "select"
