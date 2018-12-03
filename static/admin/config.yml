@@ -27,12 +27,10 @@ collections:
         options: ["primi", "secondi", "antipasti", "dolci", "estere"]
       - label: "Livello"
         name: "livello"
-        widget: "select"
-        options:
-          - {label: "Facile", value: "'facile'"}
-          - {label: "Medio", value: "'medio'"}
-          - {label: "Difficile", value: "'difficile'"}
-          - {label: "Super Nonna", value: "'super nonna'"}
+        widget: "list"
+        fields: [
+            {label: "Seleziona", widget: "select", options: ["facile", "medio", "difficile", "super nonna"]},
+            ]
       - label: "Dieta"
         name: "dieta"
         widget: "list"
