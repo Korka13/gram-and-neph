@@ -29,10 +29,10 @@ collections:
         name: "livello"
         widget: "select"
         options:
-            - { label: "facile", value: "[facile]" }
-            - { label: "medio", value: "[medio]" }
-            - { label: "difficile", value: "[difficile]" }
-            - { label: "super nonna", value: "[super nonna]" }
+            - { label: "facile", value: [facile] }
+            - { label: "medio", value: [medio] }
+            - { label: "difficile", value: [difficile] }
+            - { label: "super nonna", value: [super nonna] }
       - label: "Dieta"
         name: "dieta"
         widget: "list"
