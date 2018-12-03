@@ -36,13 +36,8 @@ collections:
       - label: "Dieta"
         name: "dieta"
         widget: "select"
-        options:
-            - { label: "vegetariana", value: [vegetariana] }
-            - { label: "vegana", value: [vegana] }
-            - { label: "gluten free", value: [gluten free] }
-            - { label: "senza lattosio", value: [senza lattosio] }
-            - { label: "iper caloricaa", value: [iper calorica] }
         multiple: true
+        options: ["vegetariana", "vegana", "senza glutine"]
       - label: "Porzioni"
         name: "porzioni"
         widget: "number"
