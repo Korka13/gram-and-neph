@@ -5,7 +5,7 @@ draft: false
 image: /images/uploads/zucchine.jpg
 categories: secondi
 livello:
-  - undefined: difficile
+  - difficile
 dieta:
   - vegana
 porzioni: 2
