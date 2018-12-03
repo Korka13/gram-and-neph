@@ -33,6 +33,13 @@ collections:
             - { label: "medio", value: [medio] }
             - { label: "difficile", value: [difficile] }
             - { label: "super nonna", value: [super nonna] }
+      - {
+          label: 'Select multiple',
+          name: 'select_multiple',
+          widget: 'select',
+          options: ['a', 'b', 'c'],
+          multiple: true,
+        }
       - label: "Tags"
         name: "tags"
         widget: "select"
