@@ -5,7 +5,7 @@ draft: false
 image: /images/uploads/spiedini-di-calamari-grigliati4.jpg
 categories: secondi
 livello:
-  - '': facile
+  - livello: facile
 dieta:
   - senza glutine
 porzioni: 4
