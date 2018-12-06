@@ -16,11 +16,16 @@ theme = "the-theme"
 
 
 [[menu.main]]
-name = "CHI SONO"
+name = "about"
 url = "about/"
 weight = 1
 
 [[menu.main]]
-name = "CONTATTI"
+name = "contatti"
 url = "contact/"
+weight = 2
+
+[[menu.main]]
+name = "privacy"
+url = "privacy/"
 weight = 2

@@ -1,31 +1,45 @@
 {{ partial "header.html" . }}
-			<h1 class="text-center">{{ .Title }}</h1>
-			<div class="">
-				<img class="img-fluid mx-auto" src="{{ .Params.image }}" alt="{{ .Title }}">
-			</div>
-			<div>
-				<ul>
-					{{ range .Params.ingredienti }}
-					<li>{{ . }}</li>
+<div class="container">
+	<h1 class="text-center">{{ .Title }}</h1>
+	<div class="row">
+			<div class="col-lg-4">
+					<div class="box">
+						<div class="content" style="background-image: url({{ .Params.image }})">
+								<!-- <img class="article-image" src="{{ .Params.image }}" alt="{{ .Title }}"> -->
+						</div>
+						
+					</div>
+					<div>
+						<ul>
+							{{ range .Params.ingredienti }}
+							<li>{{ . }}</li>
+							{{ end }}
+						</ul>
+					</div>
+					{{ range .Params.livello }}
+					<p>{{ . }}</p>
 					{{ end }}
-				</ul>
-			</div>
-			{{ range .Params.livello }}
-			<p>{{ . }}</p>
-			{{ end }}
-			{{ range .Params.dieta }}
-			<p>{{ . }}</p>
-			{{ end }}
-			{{ range .Params.tempo }}
-			<p>{{ . }}</p>
-			{{ end }}
-			<div>
-				{{ .Content }}
-			</div>
+					{{ range .Params.dieta }}
+					<p>{{ . }}</p>
+					{{ end }}
+					{{ range .Params.tempo }}
+					<p>{{ . }}</p>
+					{{ end }}
+				</div>
+					<div class="col-lg-8">
+						{{ .Content }}
+					</div>
+	</div>
+
+	
+	
 
 
-			<div>
-				{{ template "_internal/disqus.html" . }}
-			</div>
+	<div>
+		{{ template "_internal/disqus.html" . }}
+	</div>
+
+</div>
+
 
 {{ partial "footer.html" . }}
