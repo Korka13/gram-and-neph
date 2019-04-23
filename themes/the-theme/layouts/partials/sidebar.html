@@ -1,9 +1,11 @@
 		<div class="col-3">
+				{{ $taxo := "dieta" }}
 				<h3>Dieta</h3>
 				<div class="list-group">
-					
-					{{ range $name, $taxonomy := .Site.Taxonomies.dieta }}
-					<a class="list-group-item list-group-item-action" href="{{ "/dieta/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}</a>
+					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+					{{ range .Pages.ByTitle }}
+					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
+					{{ end }}
 					{{ end }}
 				</div>
 				{{ $taxo := "livello" }}
@@ -14,12 +16,14 @@
 					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
 					{{ end }}
 					{{ end }}
-				</div>
-				
+				</div>				
+				{{ $taxo := "tempo" }}
 				<h3>Tempo</h3>
 				<div class="list-group">
-					{{ range $name, $taxonomy := .Site.Taxonomies.tempo }}
-					<a class="list-group-item list-group-item-action" href="{{ "/tempo/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}</a>
+					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+					{{ range .Pages.ByTitle }}
+					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
+					{{ end }}
 					{{ end }}
 				</div>
 		</div>
