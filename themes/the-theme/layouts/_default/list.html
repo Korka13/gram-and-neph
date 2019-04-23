@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
 <div class="container w-100">
-			<div class="row justify-content-around">
+			<div class="row">
+					{{ partial "sidebar.html" . }}
+					<div class="col-9">
 				{{ $paginator := .Paginate (where (where .Data.Pages "Type" "ricetta") "IsPage" true) 6 }}
 				{{ range $index, $element := .Paginator.Pages }}
 		{{ partial "summary.html" . }}

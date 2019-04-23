@@ -6,6 +6,9 @@ image: /images/uploads/download.jpg
 categories: antipasti
 livello: 
   - super nonna
+
+livello_weight: 50
+
 dieta: 
   - gluten free
 porzioni: 8

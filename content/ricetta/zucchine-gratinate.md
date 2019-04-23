@@ -6,6 +6,7 @@ image: /images/uploads/zucchine.jpg
 categories: secondi
 livello:
   - difficile
+livello_weight: 30
 dieta:
   - vegana
 porzioni: 2

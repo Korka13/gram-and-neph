@@ -7,6 +7,7 @@ categories:
   - antipasti
 livello:
   - facile
+livello_weight: 10
 dieta:
   - vegana
 tempo:

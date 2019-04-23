@@ -7,6 +7,8 @@ categories:
   - secondi
 livello:
   - medio
+livello_weight: 20
+
 dieta:
   - marittima
 tempo:

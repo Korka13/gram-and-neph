@@ -1,14 +1,25 @@
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					{{ range first 5 .Site.Pages }}
-					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		<div class="col-3">
+				<h3>Dieta</h3>
+				<div class="list-group">
+					
+					{{ range $name, $taxonomy := .Site.Taxonomies.dieta }}
+					<a class="list-group-item list-group-item-action" href="{{ "/dieta/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}</a>
 					{{ end }}
-				</ul>
-			</div>
+				</div>
+				{{ $taxo := "livello" }}
+				<h3>Difficoltà</h3>
+				<div class="list-group">
+					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+					{{ range .Pages.ByWeight }}
+					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
+					{{ end }}
+					{{ end }}
+				</div>
+				
+				<h3>Tempo</h3>
+				<div class="list-group">
+					{{ range $name, $taxonomy := .Site.Taxonomies.tempo }}
+					<a class="list-group-item list-group-item-action" href="{{ "/tempo/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}</a>
+					{{ end }}
+				</div>
 		</div>
-	</aside>

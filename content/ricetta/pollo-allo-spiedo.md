@@ -6,6 +6,7 @@ image: /images/uploads/pollo.jpg
 categories: estere
 livello: 
   - super nonna
+livello_weight: 50
 dieta:
   - gluten free
   - senza lattosio

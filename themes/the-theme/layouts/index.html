@@ -1,11 +1,14 @@
 {{ partial "header.html" . }}
 
-<div class="container w-100">
-			<div class="row justify-content-around">
-				{{ $paginator := .Paginate (where (where .Site.Pages "Type" "ricetta") "IsPage" true) 6 }}
+<div class="container">
+			<div class="row">
+					{{ partial "sidebar.html" . }}
+				<div class="col-9">
+					<h1 class="mt-4 text-center">Latest recipes</h1>
+				{{ $paginator := .Paginate (where (where .Site.Pages "Type" "ricetta") "IsPage" true) 3 }}
 				{{ range $index, $element := .Paginator.Pages }}
 		{{ partial "summary.html" . }}
-		{{ end }}
+		{{ end }}		
 	</div>
 </div>
 

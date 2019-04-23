@@ -6,6 +6,7 @@ image: /images/uploads/polenta-con-seppioline-in-umido-725x545.jpg
 categories: secondi
 livello:
   - difficile
+livello_weight: 30
 dieta:
   - vegana
   - senza glutine

@@ -7,6 +7,7 @@ categories:
   - dolci
 livello:
   - esperto
+livello_weight: 40
 dieta:
   - golosa
 tempo:

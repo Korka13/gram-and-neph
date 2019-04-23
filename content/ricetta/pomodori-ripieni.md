@@ -6,6 +6,7 @@ image: /images/uploads/pomodori-ripieni.jpg
 categories: dolci
 livello:
   - facile
+livello_weight: 10
 dieta:
   - senza glutine
   - vegana

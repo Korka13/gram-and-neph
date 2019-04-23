@@ -1,11 +1,11 @@
 <footer class="bg-info footer">
 			<ul class="nav justify-content-center">
 				<li class="nav-item px-2 text-dark">&copy; {{ now.Year }} {{ .Site.Title }}</li>
-				{{ range .Site.Menus.main }}
+				{{ range .Site.Menus.footer }}
 				<li class="nav-item px-2 text-dark"><a class="text-dark" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 				{{ end }}
 			</ul>
-  </footer>
+</footer>
 
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>

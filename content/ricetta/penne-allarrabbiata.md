@@ -6,6 +6,7 @@ image: /images/uploads/pennearrabbiata.jpg
 categories: primi
 livello:
   - facile
+livello_weight: 10
 dieta:
   - vegetariana
   - vegana

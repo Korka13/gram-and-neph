@@ -7,6 +7,7 @@ categories:
   - primi
 livello:
   - facile
+livello_weight: 10
 dieta:
   - gluten free
 tempo:

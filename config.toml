@@ -10,22 +10,49 @@ theme = "the-theme"
   livello = "livello"
   tempo = "tempo"
 
+[permalinks]
+  livello = "/:section/:slug/"
 
-
-
-
+[menu]
 
 [[menu.main]]
 name = "about"
-url = "about/"
+identifier = "about"
+url = "/about/"
 weight = 1
 
 [[menu.main]]
-name = "contatti"
-url = "contact/"
+name = "contact"
+identifier = "contact"
+url = "/contact/"
 weight = 2
 
-[[menu.main]]
+[[menu.footer]]
 name = "privacy"
 url = "privacy/"
+weight = 1
+
+[[menu.difficulty]]
+name = "facile"
+url = "/livello/facile"
+weight = 1
+
+[[menu.difficulty]]
+name = "medio"
+url = "/livello/medio"
 weight = 2
+
+[[menu.difficulty]]
+name = "difficile"
+url = "/livello/difficile"
+weight = 3
+
+[[menu.difficulty]]
+name = "esperto"
+url = "/livello/esperto"
+weight = 4
+
+[[menu.difficulty]]
+name = "super nonna"
+url = "/livello/super-nonna"
+weight = 5

@@ -7,6 +7,7 @@ categories:
   - Estere
 livello:
   - facile
+livello_weight: 10
 dieta:
   - vegana
 tempo:

@@ -7,6 +7,7 @@ categories:
   - primi
 livello:
   - difficile
+livello_weight: 30
 dieta:
   - mediterranea
 tempo:

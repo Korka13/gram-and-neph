@@ -33,10 +33,11 @@ collections:
         name: "livello"
         widget: "select"
         options:
-            - { label: "facile", value: [facile] }
-            - { label: "medio", value: [medio] }
-            - { label: "difficile", value: [difficile] }
-            - { label: "super nonna", value: [super nonna] }
+            - { label: "facile", value: [01 facile] }
+            - { label: "medio", value: [02 medio] }
+            - { label: "difficile", value: [03 difficile] }
+            - { label: "esperto", value: [04 esperto] }
+            - { label: "super nonna", value: [05 super nonna] }
       - {
           label: 'Dieta',
           name: 'dieta',
