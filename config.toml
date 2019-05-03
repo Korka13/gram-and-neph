@@ -2,16 +2,13 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Ricets"
 theme = "the-theme"
-
+paginate = 2
 
 [taxonomies]
   category = "categories"
   dieta = "dieta"
   livello = "livello"
   tempo = "tempo"
-
-[permalinks]
-  livello = "/:section/:slug/"
 
 [menu]
 
@@ -29,30 +26,11 @@ weight = 2
 
 [[menu.footer]]
 name = "privacy"
-url = "privacy/"
+url = "/privacy/"
 weight = 1
 
-[[menu.difficulty]]
-name = "facile"
-url = "/livello/facile"
-weight = 1
-
-[[menu.difficulty]]
-name = "medio"
-url = "/livello/medio"
-weight = 2
-
-[[menu.difficulty]]
-name = "difficile"
-url = "/livello/difficile"
-weight = 3
-
-[[menu.difficulty]]
-name = "esperto"
-url = "/livello/esperto"
-weight = 4
-
-[[menu.difficulty]]
-name = "super nonna"
-url = "/livello/super-nonna"
-weight = 5
+[params]
+[[livello]]
+sortByWeight = true
+[[dieta]]
+sortByWeight = false

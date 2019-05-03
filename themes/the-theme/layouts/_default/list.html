@@ -1,19 +1,17 @@
 {{ partial "header.html" . }}
-
-<div class="container w-100">
-			<div class="row">
-					{{ partial "sidebar.html" . }}
-					<div class="col-9">
-				{{ $paginator := .Paginate (where (where .Data.Pages "Type" "ricetta") "IsPage" true) 6 }}
+	<div class="container w-100">
+		<h1 class="text-center">{{ if .IsHome }}Latest Recipes{{else}}{{.Title }}{{ end }}</h1>
+		<div class="row">
+			{{ partial "sidebar.html" . }}
+			<div class="col-9">
+				{{ $paginator := .Paginate (where (where .Data.Pages "Type" "ricetta") "IsPage" true) }}
 				{{ range $index, $element := .Paginator.Pages }}
-		{{ partial "summary.html" . }}
-		{{ end }}
+				{{ partial "summary.html" . }}
+				{{ end }}
+			</div>
+		</div>
 	</div>
-</div>
-
-<div class="container d-flex justify-content-center">
-	{{ template "_internal/pagination.html" . }}
-</div>
-
-
+	<div class="container d-flex justify-content-center">
+		{{ partial "pagination.html" . }}
+	</div>
 {{ partial "footer.html" . }}

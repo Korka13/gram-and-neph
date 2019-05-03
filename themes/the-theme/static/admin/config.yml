@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  # repo: Korka13/Korka13.github.io
   branch: master
   site_domain: youthful-kare-33d160.netlify.com
 
@@ -28,16 +27,15 @@ collections:
       - label: "Category"
         name: "categories"
         widget: "select"
-        options: ["primi", "secondi", "antipasti", "dolci", "estere"]
+        options: ["primi", "secondi", "antipasti", "dolci", "estere"] # Your categories here
       - label: "Livello"
         name: "livello"
         widget: "select"
         options:
-            - { label: "facile", value: [01 facile] }
-            - { label: "medio", value: [02 medio] }
-            - { label: "difficile", value: [03 difficile] }
-            - { label: "esperto", value: [04 esperto] }
-            - { label: "super nonna", value: [05 super nonna] }
+            - { label: "facile", value: [facile] }
+            - { label: "medio", value: [medio] }
+            - { label: "difficile", value: [difficile] }
+            - { label: "esperto", value: [esperto] }
       - {
           label: 'Dieta',
           name: 'dieta',

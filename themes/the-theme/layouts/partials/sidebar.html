@@ -1,29 +1,16 @@
 		<div class="col-3">
-				{{ $taxo := "dieta" }}
-				<h3>Dieta</h3>
-				<div class="list-group">
-					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-					{{ range .Pages.ByTitle }}
-					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
-					{{ end }}
-					{{ end }}
-				</div>
-				{{ $taxo := "livello" }}
-				<h3>Difficoltà</h3>
-				<div class="list-group">
-					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-					{{ range .Pages.ByWeight }}
-					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
-					{{ end }}
-					{{ end }}
-				</div>				
-				{{ $taxo := "tempo" }}
-				<h3>Tempo</h3>
-				<div class="list-group">
-					{{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-					{{ range .Pages.ByTitle }}
-					<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title}}</a>
-					{{ end }}
+			{{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+			{{ if (ne $taxonomy_term "categories") }}
+			{{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+				<h3 class="text-center mt-5 text-capitalize">{{ $taxonomy_term }}</h3>
+				<div class="list-group mb-5">
+					{{ with ($.Site.GetPage (printf "/%s" $taxonomy_term)) }}					
+						{{ range .Pages.ByWeight }}
+							<a class="list-group-item list-group-item-action text-capitalize" href="{{ .RelPermalink }}">{{ .Title }}</a>
+						{{ end }}	
 					{{ end }}
 				</div>
+			{{ end }}
+			{{ end }}
+			{{ end }}
 		</div>

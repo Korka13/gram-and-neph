@@ -1,55 +1,40 @@
 {{ partial "header.html" . }}
-<div class="container">
-	<h1 class="text-center">{{ .Title }}</h1>
-	<div class="row">
+	<div class="container">
+		<h1 class="text-center">{{ .Title }}</h1>
+		<div class="row">
 			<div class="col-lg-4">
-					<div class="card border-0 mx-2">
-							<img class="card-img-top rounded border" src="{{ .Params.image }}" alt="{{ .Title }}">
-							<div class="card-body">
-
-								<p class="card-text d-flex justify-content-around">
-									{{ range .Params.livello }}
-									<span>{{ . }}</span>
-									{{ end }}
-									{{ range .Params.dieta }}
-									<span>{{ . }}</span>
-									{{ end }}
-									{{ range .Params.tempo }}
-									<span>{{ . }}</span>
-									{{ end }}
-								</p>
-								
-						
-							</div>
-
-
+				<div class="card border-0 mx-2">
+					<img class="card-img-top rounded border" src="{{ .Params.image }}" alt="{{ .Title }}">
+					<div class="card-body">
+						<p class="card-text d-flex justify-content-around">
+							{{ range .Params.livello }}
+							<span>{{ . }}</span>
+							{{ end }}
+							{{ range .Params.dieta }}
+							<span>{{ . }}</span>
+							{{ end }}
+							{{ range .Params.tempo }}
+							<span>{{ . }}</span>
+							{{ end }}
+						</p>	
+					</div>
 				</div>
 			</div>
-					<div class="col-lg-8">
-							<div>
-									<ul>
-										{{ range .Params.ingredienti }}
-										<li>{{ . }}</li>
-										{{ end }}
-									</ul>
-								</div>
-								<div>
-										{{ .Content }}
-								</div>
-
-						
-					</div>
-
-
-	
-	
-</div>
-
-	<div>
-		{{ template "_internal/disqus.html" . }}
+			<div class="col-lg-8">
+				<div>
+					<ul>
+					{{ range .Params.ingredienti }}
+						<li>{{ . }}</li>
+					{{ end }}
+					</ul>
+				</div>
+				<div>
+					{{ .Content }}
+				</div>
+			</div>
+		</div>
+		<div>
+			{{ template "_internal/disqus.html" . }}
+		</div>
 	</div>
-
-
-</div>
-
 {{ partial "footer.html" . }}
