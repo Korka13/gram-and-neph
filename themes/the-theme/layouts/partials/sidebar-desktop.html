@@ -1,9 +1,8 @@
-		<div class="col-3">
 			{{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
 			{{ if (ne $taxonomy_term "categories") }}
-			{{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-				<h3 class="text-center mt-5 text-capitalize">{{ $taxonomy_term }}</h3>
-				<div class="list-group mb-5">
+			{{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}				
+				<div class="list-group mb-5 d-none d-md-block">
+					<h3 class="text-center text-capitalize list-group-item">{{ $taxonomy_term }}</h3>
 					{{ with ($.Site.GetPage (printf "/%s" $taxonomy_term)) }}					
 						{{ range .Pages.ByWeight }}
 							<a class="list-group-item list-group-item-action text-capitalize" href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -13,4 +12,3 @@
 			{{ end }}
 			{{ end }}
 			{{ end }}
-		</div>

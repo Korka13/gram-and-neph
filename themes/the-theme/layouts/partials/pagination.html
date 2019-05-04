@@ -1,29 +1,16 @@
+{{ $pag := $.Paginator }}
 
-{{ $paginator := .Paginator }}
-{{ if gt $paginator.TotalPages 1 }}
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-      {{ if $paginator.HasPrev }}
-      <li class="page-item">
-        <a href="{{ $paginator.Prev.URL }}" class="page-link">
-          «
-        </a>
-      </li>
-    {{ end }}
-    {{ range $paginator.Pagers }}
-    <li class="page-item{{ if eq . $paginator }} active{{ end }}">
-      <a class="page-link" href="{{ .URL }}">
-        {{ .PageNumber }}
-      </a>
-    </li>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-      <li class="page-item">
-        <a href="{{ $paginator.Next.URL }}" class="page-link">
-            »
-        </a>
-      </li>
-      {{ end }}
-  </ul>
+<nav class="blog-pagination d-flex justify-content-between">
+	{{ if gt $pag.TotalPages 1 }}
+			{{ if $pag.HasPrev  }}
+			<a href="{{ $pag.Prev.URL }}" class="btn btn-outline-secondary">Previous Page</a>
+			{{ else }}
+			<a href="#" class="btn btn-outline-secondary disabled">Previous Page</a>
+			{{ end }}
+			{{ if $pag.HasNext }}
+			<a href="{{ $pag.Next.URL }}" rel="next" class="btn btn-outline-secondary">Next Page</a>
+			{{ else }}
+			<a href="#" rel="next" class="btn btn-outline-secondary disabled">Next Page</a>
+			{{ end }}
+	{{ end }}
 </nav>
-{{ end }}

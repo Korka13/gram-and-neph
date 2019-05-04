@@ -1,6 +1,6 @@
-	<div class="card my-5">
-		<a href="{{ .RelPermalink }}"><img class="card-img-top rounded border" src="{{ .Params.image }}" alt="{{ .Title }}"></a>
-		<div class="card-body">
+	<div class="card mb-5 border-0">
+		<a href="{{ .RelPermalink }}"><img class="card-img-top rounded-0" src="{{ .Params.image }}" alt="{{ .Title }}"></a>
+		<div class="card-body border">
 			<p class="card-text d-flex justify-content-around">
 				{{ range .Params.livello }}
 				<span class="text-capitalize">{{ . }}</span>
