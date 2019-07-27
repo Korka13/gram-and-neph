@@ -7,13 +7,13 @@
 			</div>
 			<div class="col-md-3">
 				<div class="d-flex flex-md-column justify-content-around">
-					{{ range .Params.livello }}
+					{{ range .Params.difficulty }}
 					<p>{{ . }}</p>
 					{{ end }}
 					{{ range .Params.dieta }}
 					<p>{{ . }}</p>
 					{{ end }}
-					{{ range .Params.tempo }}
+					{{ range .Params.time }}
 					<p>{{ . }}</p>
 					{{ end }}
 				</div>
@@ -23,7 +23,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul>
-				{{ range .Params.ingredienti }}
+				{{ range .Params.ingredients }}
 					<li>{{ . }}</li>
 				{{ end }}
 				</ul>					

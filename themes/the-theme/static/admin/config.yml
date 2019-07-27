@@ -5,7 +5,7 @@ backend:
 
 display_url: https://youthful-kare-33d160.netlify.com
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 
 # These lines should *not* be indented
@@ -14,58 +14,61 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 
 collections:
-  - name: "ricetta" # Used in routes, e.g., /admin/collections/blog
-    label: "Ricetta" # Used in the UI
-    folder: "content/ricetta" # The path to the folder where the documents are stored
+  - name: "recipe" # Used in routes, e.g., /admin/collections/blog
+    label: "Recipe" # Used in the UI
+    folder: "content/recipe" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Image", name: "image", widget: "image"}
       - label: "Category"
         name: "categories"
         widget: "select"
         options: ["primi", "secondi", "antipasti", "dolci", "estere"] # Your categories here
-      - label: "Livello"
-        name: "livello"
+      - label: "Difficulty"
+        name: "difficulty"
         widget: "select"
         options:
-            - { label: "facile", value: [facile] }
-            - { label: "medio", value: [medio] }
-            - { label: "difficile", value: [difficile] }
-            - { label: "esperto", value: [esperto] }
+            - { label: "Easy", value: [easy] }
+            - { label: "Medium", value: [medium] }
+            - { label: "Difficult", value: [difficult] }
       - {
-          label: 'Dieta',
-          name: 'dieta',
+          label: 'Special Diet',
+          name: 'diet',
           widget: 'select',
-          options: ['vegetariana', 'vegana', 'senza glutine'],
+          options: ['Vegetarian', 'vegan', 'Gluten Free', 'Lactose Free'],
           multiple: true,
         }
-      - label: "Porzioni"
-        name: "porzioni"
+      - label: "Portions"
+        name: "portions"
         widget: "number"
         valueType: "int"
         default: 4
-      - label: "Tempo"
-        name: "tempo"
-        widget: "list"
-      - {label: "Ingredienti", name: "ingredienti", widget: "list"}
-      - {label: "Keywords", name: "keywords", widget: "list"}
-      - {label: "Description", name: "description", widget: "string"}
+      - label: "Time"
+        name: "time"
+        widget: "select"
+        options:
+            - { label: "Less than an hour", value: [less than an hour] }
+            - { label: "Between 1 and 2 hours", value: [between 1 and 2 hours] }
+            - { label: "Long preparation", value: [long preparation] }
+      - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - {label: "Meta Keywords", name: "keywords", widget: "list"}
+      - {label: "Meta Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     delete: false
     files:
       - file: "content/about.md"
-        label: "Chi Siamo"
+        label: "About"
         name: "about"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: "Publish Date", name: "date", widget: "datetime"}
-          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "content/contact.md"
         label: "Contact Page"
@@ -73,13 +76,13 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: "Publish Date", name: "date", widget: "datetime"}
-          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "content/privacy.md"
-        label: "Privacy Page"
+        label: "Privacy and cookie policy"
         name: "privacy"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Publish Date", name: "date", widget: "datetime"}
-          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}

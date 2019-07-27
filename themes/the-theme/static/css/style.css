@@ -10,7 +10,7 @@ min-height: 100vh;
 }
 .navbar {
   height: 6rem;
-  background-image: url(img/nav_bg.jpg);
+  /* background-image: url(../img/nav_bg.jpg); */
 }
 .content-wrap {
 	margin-top: 2rem;
